@@ -4,10 +4,13 @@ class Calc
   end
 
   def evaluate(expression)
-    tokens = expression.split('-')
+    tokens = expression.split('+')
 
     tokens.inject(0) do |sum, token|
-      sum += token.to_i
+      result = token.split('-').collect {|x| x.to_i}.inject do |r, t|
+        r -= t
+      end
+      sum += result
     end
 
   end

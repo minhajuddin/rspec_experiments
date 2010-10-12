@@ -33,6 +33,18 @@ describe Calc do
 
     end
 
+    context "#subtraction" do
+
+      it "returns 9 for 22-13" do
+        @calc.evaluate("22-13").should == 9
+      end
+
+      #it "returns 9 for 2+7+28" do
+      #@calc.evaluate("2+7+28").should == 37
+      #end
+
+    end
+
   end
 
 end
